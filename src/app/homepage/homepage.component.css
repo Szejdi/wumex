@@ -1,0 +1,21 @@
+.container {
+  margin-top: 100px;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.no-horizontal-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+p {
+  text-align: justify;
+  color: rgb(125, 125, 125);
+  letter-spacing: 0.25px;
+  line-height: 30px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}

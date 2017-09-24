@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,24 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  private menuItemsArray: any[] = [
-    {'title': 'Electricity', 'link': '#'},
-    {'title': 'Mobile Bill', 'link': '#'},
-    {'title': 'Home and Kitchen', 'link': '#',
-      'subItems': [
-        {'title': 'Furniture', 'link': '#'},
-        {'title': 'Cookware', 'link': '#'},
-      ]
-    },
-    {'title': 'Car and Bike Accessories', 'link': '#',
-      'subItems': [
-        {'title': 'Tyres and Alloys', 'link': '#'},
-        {'title': 'Comfort and Safety', 'link': '#'},
-      ]
-    },
+  public menuItemsArray: any[] = [
+    {'title': 'Strona Główna', 'link': '/'},
+    {'title': '•• Kanapy', 'link': '#'},
+    {'title': '•• Narożniki', 'link': '/corners'},
+    {'title': '•• Fotele', 'link': '#'},
+    {'title': 'Współpraca', 'link': '#'},
+    {'title': 'Sklep', 'link': '#'},
+    {'title': 'Kontakt', 'link': '#'},
   ];
-
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -35,6 +28,7 @@ export class NavbarComponent implements OnInit {
   }
   private onItemSelect(item: any) {
     console.log(item);
+    this.router.navigate([item.link]);
   }
 
 }
