@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { Lightbox } from 'angular2-lightbox';
+import { Lightbox, LightboxConfig } from 'angular2-lightbox';
 
 @Component({
   selector: 'app-gallery',
@@ -8,7 +8,11 @@ import { Lightbox } from 'angular2-lightbox';
 })
 export class GalleryComponent implements OnInit {
   @Input() items;
-  constructor(private _lightbox: Lightbox) {}
+
+  constructor(private _lightboxConfig: LightboxConfig, private _lightbox: Lightbox) {
+    _lightboxConfig.positionFromTop = 175;
+  }
+
   ngOnInit() {
   }
 

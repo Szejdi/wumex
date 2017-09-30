@@ -13,9 +13,13 @@ import { GalleryDetailComponent } from './shared/gallery/gallery-detail/gallery-
 import {GalleryService} from './shared/gallery/gallery.service';
 import {CornersComponent} from './corners/corners.component';
 import { LightboxModule } from 'angular2-lightbox';
+import { ContactComponent } from './contact/contact.component';
+import { AgmCoreModule } from '@agm/core';
+
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent},
-  { path: 'corners', component: CornersComponent}
+  { path: 'corners', component: CornersComponent},
+  { path: 'contact', component: ContactComponent}
 ];
 
 @NgModule({
@@ -28,12 +32,14 @@ const appRoutes: Routes = [
     SofasComponent,
     GalleryComponent,
     GalleryDetailComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     SlideMenuModule,
     RouterModule.forRoot(appRoutes),
-    LightboxModule
+    LightboxModule,
+    AgmCoreModule.forRoot()
 ],
   providers: [GalleryService],
   bootstrap: [AppComponent]

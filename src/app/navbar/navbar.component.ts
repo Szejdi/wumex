@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
     {'title': '•• Fotele', 'link': '#'},
     {'title': 'Współpraca', 'link': '#'},
     {'title': 'Sklep', 'link': '#'},
-    {'title': 'Kontakt', 'link': '#'},
+    {'title': 'Kontakt', 'link': '/contact'},
   ];
   constructor(private router: Router) { }
 
