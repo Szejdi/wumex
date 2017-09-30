@@ -8,9 +8,22 @@ nav {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
+.navbar-header {
+  max-width: 80%;
+  height: 100%;
+  display: inline-block;
+}
+
 .navbar-brand {
   padding-top: 7px;
   padding-left: 15px;
+  max-width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 90%;
+  height: 100%;
 }
 
 ul {
