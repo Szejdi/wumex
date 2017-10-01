@@ -5,8 +5,8 @@ import {Chair, Corner, Sofa} from '../furniture.model';
 @Injectable()
 export class GalleryService {
   private corners: Corner[] = [new Corner('one_name', 'one.jpg')];
-  private sofas: Sofa[];
-  private chairs: Chair[];
+  private sofas: Sofa[] = [];
+  private chairs: Chair[] = [];
 
   getCorners() {
     return this.corners.slice();

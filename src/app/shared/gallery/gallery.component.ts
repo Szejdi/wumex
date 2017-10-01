@@ -18,7 +18,6 @@ export class GalleryComponent implements OnInit {
 
   open(index: number): void {
     // open lightbox
-
     console.log('open image', index);
     const item = this.items[index];
     console.log(item);

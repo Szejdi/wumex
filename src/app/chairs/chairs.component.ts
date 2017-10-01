@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {GalleryService} from '../shared/gallery/gallery.service';
+import {Chair} from '../shared/furniture.model';
 
 @Component({
   selector: 'app-chairs',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chairs.component.css']
 })
 export class ChairsComponent implements OnInit {
+  public chairs: Chair[];
 
-  constructor() { }
+  constructor(private galleryService: GalleryService) { }
 
   ngOnInit() {
+    this.chairs = this.galleryService.getChairs();
   }
 
 }

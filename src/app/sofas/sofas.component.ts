@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Sofa} from '../shared/furniture.model';
+import {GalleryService} from '../shared/gallery/gallery.service';
 
 @Component({
   selector: 'app-sofas',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sofas.component.css']
 })
 export class SofasComponent implements OnInit {
+  public sofas: Sofa[];
 
-  constructor() { }
+  constructor(private galleryService: GalleryService) { }
 
   ngOnInit() {
+    this.sofas = this.galleryService.getSofas();
   }
-
 }
