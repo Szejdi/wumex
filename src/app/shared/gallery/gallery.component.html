@@ -1,7 +1,7 @@
 <div class="container">
   <div class="gallery" *ngFor="let item of items; let i=index">
 
-    <img (click)="open(i)" src="{{item.image}}" alt="{{item.name}}" width="300" height="200">
+    <img style="cursor: pointer;" (click)="open(i)" src="{{item.image}}" alt="{{item.name}}" width="300" height="200">
 
     <div class="desc">{{item.name}}</div>
   </div>

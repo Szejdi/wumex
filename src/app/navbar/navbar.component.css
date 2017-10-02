@@ -22,8 +22,8 @@ nav {
 }
 
 img {
-  max-width: 90%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 ul {

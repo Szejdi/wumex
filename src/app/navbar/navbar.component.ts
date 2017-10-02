@@ -22,13 +22,17 @@ export class NavbarComponent implements OnInit {
   }
   public onMenuClose() {}
   public onMenuOpen() {}
-  private onItemSelect(item: any) {
+  public onItemSelect(item: any) {
     console.log(item);
     if (item.external) {
       window.open(item.link);
     } else {
       this.router.navigate([item.link]);
     }
+  }
+
+  public goToHomepage() {
+    this.router.navigate(['/']);
   }
 
 }
