@@ -1,0 +1,13 @@
+.icons{
+  position: fixed;
+  top: 87vh;
+  left: 3px;
+  right:0;
+  width:50px;
+  height:300px;
+  z-index:999999;
+}
+
+div {
+  padding-bottom: 1px;
+}

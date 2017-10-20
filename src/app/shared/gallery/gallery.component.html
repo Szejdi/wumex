@@ -1,9 +1,10 @@
-<div class="container">
-  <div class="gallery" *ngFor="let item of items; let i=index">
-
-    <img style="cursor: pointer;" (click)="open(i)" src="{{item.image}}" alt="{{item.name}}" width="300" height="200">
-
-    <div class="desc">{{item.name}}</div>
-  </div>
-
+<div class="container-fluid" style="padding-top: 100px; padding-left: 100px; padding-right: 100px; min-height: 98%">
+    <div class="row" *ngFor="let row of paginateItems(3); let i=index" style="padding-left: -5px;">
+      <div class="col-md-4" *ngFor="let item of row; let j=index">
+        <div class="gallery" style="width: 100%">
+          <img style="cursor: pointer; " (click)="open(i*3 + j)" src="{{item.image}}" alt="{{item.name}}">
+          <div class="desc">{{item.name}}</div>
+        </div>
+      </div>
+    </div>
 </div>

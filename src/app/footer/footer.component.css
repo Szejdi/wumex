@@ -1,0 +1,11 @@
+.footer {
+  bottom:0;
+  width:100%;
+  height:20px;   /* Height of the footer */
+}
+
+.footer-text {
+  padding-right: 4px;
+  font-size: 10px;
+  color: rgb(125, 125, 125)
+}

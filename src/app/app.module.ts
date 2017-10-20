@@ -15,6 +15,8 @@ import { LightboxModule } from 'angular2-lightbox';
 import { ContactComponent } from './contact/contact.component';
 import { AgmCoreModule } from '@agm/core';
 import { CooperationComponent } from './cooperation/cooperation.component';
+import { MediaComponent } from './media/media.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent},
@@ -36,6 +38,8 @@ const appRoutes: Routes = [
     GalleryComponent,
     ContactComponent,
     CooperationComponent,
+    MediaComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

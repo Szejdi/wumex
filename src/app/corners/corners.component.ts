@@ -9,18 +9,10 @@ import {Corner} from '../shared/furniture.model';
 })
 export class CornersComponent implements OnInit {
   public corners: Corner[];
-  public a = this.test()
+
   constructor(private galleryService: GalleryService) { }
 
   ngOnInit() {
     this.corners = this.galleryService.getCorners();
-  }
-
-  test() {
-    let r = [];
-    for (let i = 0; i < 100; i++) {
-      r.push(i);
-    }
-    return r;
   }
 }

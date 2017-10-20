@@ -8,21 +8,32 @@ import { Lightbox, LightboxConfig } from 'angular2-lightbox';
 })
 export class GalleryComponent implements OnInit {
   @Input() items;
+  album = [];
 
   constructor(private _lightboxConfig: LightboxConfig, private _lightbox: Lightbox) {
-    _lightboxConfig.positionFromTop = 175;
   }
 
   ngOnInit() {
+    this.items.forEach(item => {
+      this.album.push({src: item.image, caption: item.name, thumb: item.image});
+    });
   }
 
   open(index: number): void {
     // open lightbox
-    console.log('open image', index);
     const item = this.items[index];
-    console.log(item);
-    const album = [{src: item.image, caption: item.name, thumb: item.image}];
-    this._lightbox.open(album, index);
+    this._lightbox.open(this.album, index);
+  }
+
+  paginateItems(pagination) {
+    const paginatedItems = [];
+    this.items.forEach((item, index) => {
+      if (index / pagination >= paginatedItems.length) {
+        paginatedItems.push([]);
+      }
+      paginatedItems[Math.floor(index / pagination)].push(item);
+    });
+    return paginatedItems;
   }
 
 }
